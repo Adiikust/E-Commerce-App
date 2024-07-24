@@ -23,13 +23,15 @@ export 'package:go_router/go_router.dart';
 
 ///---- Request
 ///---- Response
+export 'package:e_commerce_app/app/model/response/home_model.dart';
 
 ///-- Services
 ///---- Remote
 
 ///---- Repository
 
-///-- Blocs
+///-- provider
+export 'package:e_commerce_app/app/view_model/home/home_provider.dart';
 
 ///-- Views
 export 'package:e_commerce_app/app/view/splash/splash_view.dart';
@@ -61,12 +63,16 @@ export 'package:e_commerce_app/core/constants/strings_resource.dart';
 export 'package:e_commerce_app/core/extensions/widget_ext.dart';
 
 ///-- Enums
+export 'package:e_commerce_app/core/enums/response_status_enum.dart';
 
 ///-- Extensions
 
 ///-- Services
+export 'package:provider/provider.dart';
+export 'package:e_commerce_app/core/Services/registerall_provider.dart';
 
 ///-- Utils
 export 'package:e_commerce_app/core/utils/validation.dart';
 
 ///---- Api Utils
+export 'package:e_commerce_app/core/Services/api_endpoints.dart';

@@ -10,11 +10,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: StringsResource.appName,
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme.ligthThemeData,
-      routerConfig: router,
+    return MultiProvider(
+      providers: RegisterAllProvider.appAllProvider,
+      child: MaterialApp.router(
+        title: StringsResource.appName,
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme.ligthThemeData,
+        routerConfig: router,
+      ),
     );
   }
 }

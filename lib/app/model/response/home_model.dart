@@ -59,4 +59,3 @@ class Rating {
     return data;
   }
 }
-// https://fakestoreapi.com/products

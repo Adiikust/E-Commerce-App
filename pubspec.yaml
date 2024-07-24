@@ -18,6 +18,8 @@ dependencies:
   size_adapter: ^0.0.1
   google_fonts: ^6.1.0
   go_router: ^14.0.1
+  provider:
+  http:
 
 dev_dependencies:
   flutter_test:
