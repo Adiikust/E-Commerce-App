@@ -1,7 +1,13 @@
 import 'package:e_commerce_app/core/constants/export.dart';
 
 class HomeCardWidget extends StatelessWidget {
-  const HomeCardWidget({super.key});
+  final List? data;
+  final int? index;
+  const HomeCardWidget({
+    super.key,
+    this.data,
+    this.index,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +19,11 @@ class HomeCardWidget extends StatelessWidget {
         children: [
           Container(
             width: 150.w,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
                 color: Colors.white,
-                image: DecorationImage(image: NetworkImage(""))),
+                image: DecorationImage(
+                    image:
+                        NetworkImage(data?[index!]['image'].toString() ?? ""))),
           ),
           SizeBoxWidget(width: 5.w),
           Column(
@@ -27,7 +35,7 @@ class HomeCardWidget extends StatelessWidget {
                 child: TextViewWidget(
                   maxLines: 3,
                   isEllipsis: true,
-                  "Title : Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+                  data?[index!]['title'].toString() ?? "",
                   style: textTheme.titleSmall?.copyWith(
                     color: AppColors.darkBlueTextColor,
                     fontWeight: FontWeight.w600,
@@ -36,7 +44,7 @@ class HomeCardWidget extends StatelessWidget {
               ),
               SizeBoxWidget(height: 5.h),
               TextViewWidget(
-                "Price : 109.95",
+                "Price : ${data?[index!]['price'].toString() ?? ""}",
                 style: textTheme.titleMedium,
               ),
               SizeBoxWidget(height: 5.h),
@@ -45,7 +53,7 @@ class HomeCardWidget extends StatelessWidget {
                 child: TextViewWidget(
                   isEllipsis: true,
                   maxLines: 4,
-                  "Description : Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+                  "Description : ${data?[index!]['description'].toString() ?? ""}",
                   style: textTheme.labelMedium
                       ?.copyWith(color: AppColors.greyTextColor),
                 ),
